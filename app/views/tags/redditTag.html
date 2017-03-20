@@ -1,0 +1,11 @@
+<h2>
+   	#{if _arg.data.thumbnail.toString().contains("b.thumbs.redditmedia.com")}
+   		<img src="${_arg.data.thumbnail.cut('"')}">
+	#{/if}
+	#{else}
+	<img src="http://www.lco.cl/personnel/pics/noimage.png">
+	#{/else}			
+	
+	${_arg.data.title.cut('"')}
+</h2> 		    		    	     		    		    	
+<p>${_arg.data.domain.cut('"')}</p>

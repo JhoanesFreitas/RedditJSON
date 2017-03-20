@@ -1,0 +1,11 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<h1>Reddit service</h1>
+<p>Page infomations: ${status} - ${contentType}</p>
+
+#{list items:json.data.children, as:'data'}    
+   	#{list items:data, as:'notice'}
+   		#{redditTag notice /}    		    		    		 
+   	#{/list}    	 	   
+#{/list}
